@@ -1,1 +1,71 @@
 /*  your css code here. If applicable */
+/* Button to open the modal */
+#openModal {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Modal (hidden by default) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  transition: opacity 0.4s ease; /* Smooth fade-in effect */
+}
+
+/* Modal Content Box */
+.modal-content {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  width: 60%;
+  max-width: 500px;
+  animation: modalopen 0.4s;
+}
+
+/* Header inside the modal */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  margin: 0;
+}
+
+.close-modal {
+  font-size: 28px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-weight: bold;
+}
+
+.modal-body p {
+  margin: 15px 0;
+}
+
+/* Animation for the modal to appear */
+@keyframes modalopen {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
